@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CTL Matrix Review | SUNY Cortland Center for Teaching and Learning</title>
+<meta name="description" content="Anonymous advisory committee ratings of the SUNY Cortland Center for Teaching and Learning using the ACE/POD Network Center for Teaching and Learning Matrix (2018).">
+<style>
+:root{
+  --red:#D71E25; --maroon:#85181C; --ink:#1b1b1b; --ink2:#4a4a4a; --muted:#5f5b57;
+  --line:#d6d3cf; --line2:#ebe8e4; --paper:#ffffff; --page:#f5f3f0; --tint:#fcecec;
+  --warn-bg:#fff4dc; --warn-line:#8a5a00; --ok-bg:#eef5ee; --ok-line:#2f6b34;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html{font-size:100%}
+html.big{font-size:125%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--page);line-height:1.5}
+a{color:var(--maroon)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:.5rem;top:-3rem;background:#fff;color:var(--ink);padding:.5rem 1rem;z-index:10;border-radius:4px}
+.skip:focus{top:.5rem}
+
+.site{background:var(--red);color:#fff}
+.site .inner{max-width:1180px;margin:0 auto;padding:.9rem 1.25rem;display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;align-items:center;justify-content:space-between}
+.eyebrow-brand{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:0}
+.site h1{margin:.1rem 0 0;font-size:1.45rem;line-height:1.2}
+.tools{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.btn-ghost{background:transparent;color:#fff;border:2px solid #fff;border-radius:6px;padding:.3rem .7rem;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-ghost[aria-pressed="true"],.btn-ghost[aria-current="page"]{background:#fff;color:var(--maroon)}
+.site :focus-visible{outline-color:#fff}
+.testbar{background:#1b1b1b;color:#fff;font-size:.9rem}
+.testbar .inner{max-width:1180px;margin:0 auto;padding:.45rem 1.25rem}
+.testbar a{color:#fff}
+
+main{max-width:1180px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+main.narrow{max-width:980px}
+main:focus{outline:none}
+h2{font-size:1.6rem;margin:0 0 .5rem;line-height:1.25;color:var(--maroon)}
+h2:focus{outline:none}
+h3{font-size:1.1rem;margin:0 0 .4rem}
+.lede{color:var(--ink2);max-width:60rem;margin:0 0 1.25rem}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;margin-bottom:1.25rem}
+fieldset{border:0;padding:0;margin:0 0 1.25rem;min-width:0}
+legend{font-weight:700;padding:0;margin-bottom:.5rem;font-size:1.05rem}
+label.field{display:block;font-weight:700;margin-bottom:.35rem;font-size:1.05rem}
+.hint{font-weight:400;color:var(--muted);font-size:.9rem;display:block}
+input[type=text],textarea,select{font:inherit;width:100%;padding:.55rem .65rem;border:1px solid #8f8a84;border-radius:6px;background:#fff;color:var(--ink)}
+select{max-width:20rem}
+textarea{min-height:5rem;resize:vertical}
+[aria-invalid="true"]{border-color:#a4161a;box-shadow:0 0 0 1px #a4161a}
+.err{color:#a4161a;font-weight:600;margin:.3rem 0 0}
+.btn{display:inline-block;font:inherit;font-weight:700;border-radius:6px;padding:.6rem 1.15rem;cursor:pointer;border:2px solid var(--red);background:var(--red);color:#fff;text-decoration:none;text-align:center}
+.btn:hover{background:var(--maroon);border-color:var(--maroon)}
+.btn.secondary{background:#fff;color:var(--maroon)}
+.btn.secondary:hover{background:var(--tint)}
+.btn.quiet{background:transparent;border-color:transparent;color:var(--maroon);text-decoration:underline;padding:.3rem .4rem;font-weight:600}
+.btn[disabled]{opacity:.6;cursor:progress}
+.btnrow{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.notice{border-left:6px solid var(--warn-line);background:var(--warn-bg);padding:.75rem 1rem;border-radius:4px;margin:0 0 1rem}
+.notice.ok{border-left-color:var(--ok-line);background:var(--ok-bg)}
+.notice.info{border-left-color:var(--maroon);background:var(--tint)}
+.notice p{margin:.2rem 0}
+
+/* Choice cards */
+.choices{display:grid;gap:.75rem}
+.choices.levels{grid-template-columns:repeat(3,1fr)}
+.choices.roles{grid-template-columns:repeat(3,minmax(0,12rem))}
+.choices input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.choices label{display:flex;flex-direction:column;height:100%;border:2px solid var(--line);border-radius:var(--radius);padding:.85rem .95rem;cursor:pointer;background:#fff}
+.choices.roles label{font-weight:700;align-items:center;justify-content:center;font-size:1.05rem}
+.choices label:hover{border-color:#a59f99}
+.choices input:checked+label{border-color:var(--red);background:var(--tint);box-shadow:inset 0 5px 0 var(--red)}
+.choices input:focus-visible+label{outline:3px solid var(--ink);outline-offset:2px}
+.lvl-name{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:var(--maroon);margin-bottom:.35rem;display:flex;gap:.5rem;align-items:center}
+.lvl-num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.7rem;height:1.7rem;border-radius:50%;border:2px solid var(--maroon);font-size:.95rem;letter-spacing:0}
+.choices input:checked+label .lvl-num{background:var(--red);border-color:var(--red);color:#fff}
+.choices .text p{margin:0 0 .45rem}
+.alt-choices{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin:.9rem 0 0}
+.radio{display:flex;gap:.5rem;align-items:center;font-weight:600}
+.radio input{width:1.2rem;height:1.2rem;accent-color:var(--red)}
+
+.progress{margin:0 0 1rem}
+.progress p{margin:0 0 .3rem;font-weight:700;color:var(--ink2);font-size:.9rem}
+.progress .track{height:.55rem;background:var(--line2);border-radius:999px;overflow:hidden}
+.progress .track span{display:block;height:100%;background:var(--red)}
+.crit-eyebrow{margin:0;color:var(--muted);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}
+.domain-intro{color:var(--ink2);margin:.2rem 0 .75rem;max-width:62rem;font-size:.95rem}
+.cumnote{font-size:.9rem;color:var(--ink2);margin:0 0 .75rem}
+.footnote{font-size:.85rem;color:var(--ink2);margin:.75rem 0 0;max-width:70rem}
+details.comment{margin-top:1rem}
+details.comment summary{cursor:pointer;font-weight:700;color:var(--maroon)}
+details.comment textarea{margin-top:.5rem}
+.stepnav{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1.25rem;flex-wrap:wrap}
+
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:.5rem .55rem;border-bottom:1px solid var(--line2);vertical-align:middle}
+th{font-size:.85rem;color:var(--muted);font-weight:700}
+.review td:last-child{text-align:right}
+.unrated{color:#8a5a00;font-weight:700}
+
+/* Results */
+.res-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:flex-end;margin-bottom:1rem}
+.res-head h2{font-size:1.9rem;margin:0}
+.res-meta{color:var(--ink2);margin:.2rem 0 0;font-weight:600}
+.yearpick{display:flex;gap:.5rem;align-items:center;margin-top:.5rem}
+.yearpick label{font-weight:700}
+.yearpick select{width:auto}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}
+.tile{background:#fff;border:1px solid var(--line);border-top:6px solid var(--red);border-radius:var(--radius);padding:1rem 1.15rem}
+.tile h3{font-size:1rem;color:var(--ink2);margin:0 0 .2rem}
+.hero{display:flex;align-items:baseline;gap:.45rem;margin:.1rem 0}
+.hero .num{font-size:3.2rem;font-weight:800;color:var(--maroon);line-height:1;font-variant-numeric:tabular-nums}
+.hero .of{font-size:1rem;color:var(--ink2);font-weight:600}
+.tile .scored{font-size:.9rem;color:var(--ink2);margin:.2rem 0 .7rem}
+.rolebars{margin:0;display:grid;gap:.35rem}
+.rolebars div{display:grid;grid-template-columns:7.5rem 1fr 2.4rem;gap:.5rem;align-items:center}
+.rolebars dt{font-size:.9rem;font-weight:600}
+.rolebars dd{margin:0;display:contents}
+.rbar{display:block;height:.6rem;background:var(--line2);border-radius:999px;overflow:hidden}
+.rbar i{display:block;height:100%;background:var(--red);border-radius:999px}
+.rv{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.tile .flags{font-size:.88rem;margin:.7rem 0 0;color:#5a3b00}
+.legend{font-size:.9rem;color:var(--ink2);margin:0 0 1rem}
+.res-table{table-layout:fixed}
+.res-table th{background:var(--page)}
+.res-table td{padding:.55rem .55rem}
+.res-table .cname{font-weight:600}
+.stat{display:flex;align-items:center;gap:.45rem}
+.stat .v{font-weight:800;font-variant-numeric:tabular-nums;min-width:1.8rem}
+.stat .rbar{flex:1;max-width:4.5rem}
+.stat .n{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.stat.all .v{color:var(--maroon);font-size:1.1rem}
+.dash{color:var(--muted)}
+.flag{display:inline-block;font-size:.82rem;font-weight:700;background:var(--warn-bg);border:1px solid var(--warn-line);color:#5a3b00;border-radius:999px;padding:.05rem .5rem;margin:.1rem 0}
+.small{font-size:.88rem;color:var(--ink2)}
+details.comments summary{cursor:pointer;font-weight:700;color:var(--maroon);font-size:1.05rem}
+.comment-list{list-style:none;padding:0;margin:.75rem 0 0}
+.comment-list li{border-left:4px solid var(--line);padding:.35rem .75rem;margin:0 0 .6rem}
+.comment-list .who{font-size:.82rem;color:var(--muted);font-weight:700}
+.display-mode .tools,.display-mode .testbar,.display-mode .hide-in-display{display:none!important}
+.display-mode main{max-width:none;padding:1rem 2rem}
+.display-only{display:none!important}
+.display-mode .display-only{display:inline-block!important}
+
+footer{border-top:1px solid var(--line);background:#fff;color:var(--ink2);font-size:.85rem}
+footer .inner{max-width:1180px;margin:0 auto;padding:1rem 1.25rem}
+footer p{margin:.25rem 0}
+
+@media (max-width:900px){
+  .tiles{grid-template-columns:1fr}
+  .choices.levels{grid-template-columns:1fr}
+  .res-table, .res-table thead, .res-table tbody, .res-table tr, .res-table td{display:block}
+  .res-table{table-layout:auto}
+  .res-table thead{position:absolute;left:-9999px}
+  .res-table tr{border-bottom:1px solid var(--line);padding:.5rem 0}
+  .res-table td{border:0;padding:.2rem 0;display:flex;gap:.75rem;align-items:center}
+  .res-table td::before{content:attr(data-label);flex:0 0 8.5rem;font-size:.82rem;color:var(--muted);font-weight:700}
+  .res-table td.cname::before{display:none}
+}
+@media (max-width:560px){
+  .choices.roles{grid-template-columns:1fr}
+  .site h1{font-size:1.2rem}
+}
+@media (forced-colors:active){
+  .choices input:checked+label{outline:3px solid CanvasText}
+  .rbar i,.progress .track span{background:CanvasText}
+}
+@media print{
+  .tools,.testbar,.btn,.btnrow,.hide-in-print{display:none!important}
+  body{background:#fff}
+  .card,.tile{break-inside:avoid}
+  .site{background:#fff;color:var(--ink);border-bottom:4px solid var(--red)}
+  details.comments{display:block}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="inner">
+    <div>
+      <p class="eyebrow-brand">SUNY Cortland · Center for Teaching and Learning</p>
+      <h1>CTL Matrix Review</h1>
+    </div>
+    <nav class="tools" aria-label="Page">
+      <a class="btn-ghost" href="#rate" data-view="rate">Rate the CTL</a>
+      <a class="btn-ghost" href="#results" data-view="results">Results</a>
+      <button type="button" class="btn-ghost" id="btn-big" aria-pressed="false">Large text</button>
+    </nav>
+  </div>
+</header>
+<div class="testbar" id="testbar" hidden><div class="inner">Test mode: responses are saved only in this browser. Connect the Google Sheet to collect responses from every device (see README).</div></div>
+<main id="main" tabindex="-1"></main>
+<footer>
+  <div class="inner">
+    <p>Rubric text: <cite>A Center for Teaching and Learning Matrix</cite> (2018), a collaboration of the American Council on Education (ACE) and the POD Network, used under a Creative Commons Attribution-NonCommercial International License. <a href="https://podnetwork.org/content/uploads/ACE-POD-Teaching-Center-Matrix-2018.pdf">Original matrix (PDF)</a>.</p>
+    <p>Responses are anonymous. Please don’t include names in comments.</p>
+  </div>
+</footer>
+<div id="live" class="sr-only" aria-live="polite"></div>
+
+<script>
+'use strict';
+
+/* =====================================================================
+   SETTINGS
+   API_URL: paste the Google Apps Script web app URL (ends in /exec)
+   between the quotes. Leave it empty to run in test mode, where
+   responses are kept only in the current browser.
+   ===================================================================== */
+var API_URL = '';
+var YEARS = ['2025–26', '2026–27', '2027–28', '2028–29', '2029–30', '2030–31'];
+var ROLES = ['Administrator', 'Faculty', 'Staff'];
+var ROLE_PLURAL = { Administrator: 'Administrators', Faculty: 'Faculty', Staff: 'Staff' };
+var SCHOOLS = ['School of Arts and Sciences', 'School of Education', 'School of Professional Studies'];
+var REFRESH_SECONDS = 20;
+var ROLE_GAP_FLAG = 1.0;   // flag when role averages differ by this much or more
+
+(function () { var m = location.search.match(/[?&]api=([^&]+)/); if (m) API_URL = decodeURIComponent(m[1]); })();
+
+/* =====================================================================
+   RUBRIC CONTENT
+   Verbatim from A Center for Teaching and Learning Matrix (ACE and POD
+   Network, 2018), CC BY-NC. Each level is an array of paragraphs as they
+   appear in the matrix cell. "Plus:" is the matrix's own marker that a
+   level includes the level before it.
+   ===================================================================== */
+var LEVELS = [
+  { v: '1', name: 'Beginning/Developing',   short: 'Developing',  desc: 'an emerging level, representing evolving practice in educational development' },
+  { v: '2', name: 'Proficient/Functioning', short: 'Functioning', desc: 'a competent level, representing skillful practice in educational development' },
+  { v: '3', name: 'Accomplished/Exemplary', short: 'Exemplary',   desc: 'a desired level, representing best practices in educational development' }
+];
+var MATRIX = [
+  {
+    "id": "A",
+    "name": "Organizational Structure",
+    "intro": "The organizational structure of the teaching and learning center (Center, or CTL) reveals institutional commitment to educational development, teaching, and student learning.",
+    "criteria": [
+      {
+        "id": "A1",
+        "name": "Mission, Vision, and Goals",
+        "levels": [
+          [
+            "Center is crafting a mission, vision, and goals, and it is making a first attempt at aligning with campus priorities.",
+            "CTL is in the process of writing a strategic plan. Center does not yet have an assessment plan and procedures for documenting and measuring effectiveness."
+          ],
+          [
+            "Center has an articulated mission, vision, and goals, but goals may need to be better aligned with institutional mission and connected to campus priorities.",
+            "Center has a strategic plan and initial process for documenting and measuring effectiveness."
+          ],
+          [
+            "Center has an articulated mission that is connected to its institution’s strategic plan and priorities, key goals that align with mission, activities that enable the Center to reach these goals, and a comprehensive evaluation plan."
+          ]
+        ]
+      },
+      {
+        "id": "A2",
+        "name": "Leadership",
+        "levels": [
+          [
+            "Center leadership role is emerging for institutional type, e.g., part-time director, minimal release time for small college director, new in position.",
+            "Center is researching and identifying qualifications, experience, and competencies for a faculty developer position, and makes evident the incumbent should demonstrate a commitment to diversity and inclusion."
+          ],
+          [
+            "Center leadership role is appropriate for institutional type, e.g., full-time director or release time for small college director; there is low turnover (average term of service at least three years).",
+            "Initial qualities for a leadership position are developed. This includes a concerted effort and commitment to diversity and inclusion when considering candidates with the requisite qualifications, experience, and competencies aligned with the position. There is a concerted effort to reduce staff turnover."
+          ],
+          [
+            "Center leadership role is appropriate for institutional type, e.g., full-time, mid- to high-level unit leader.",
+            "There is a very clear commitment to equity-minded leadership when considering qualifications, experience, and competencies. There is a low rate of turnover. If director appointment is temporary and rotating, term is long enough for achievement of goals.",
+            "Director is consulted on plans and included on key committees involving teaching improvement and student success."
+          ]
+        ]
+      },
+      {
+        "id": "A3",
+        "name": "Staff Expertise and Preparation",
+        "levels": [
+          [
+            "Director/staff may be recognized for teaching excellence.",
+            "Director/staff may be new to academic leadership and/or educational development."
+          ],
+          [
+            "Director has some experience managing an academic center or program.",
+            "Director/staff have some background or experience that directly impacts educational development or student learning."
+          ],
+          [
+            "Director has considerable management and supervisory experience in higher education administration (including in a CTL context).",
+            "Director/staff have substantial educational training or documented work experience in educational development and student learning.",
+            "Director/staff engage in ongoing professional development."
+          ]
+        ]
+      },
+      {
+        "id": "A4",
+        "name": "Institutional Placement",
+        "levels": [
+          [
+            "A formal center and/or an individual charged with responsibility for educational development is emergent."
+          ],
+          [
+            "A formal center and/or an individual charged with responsibility for educational development has been identified.",
+            "Center is one of several campus units that support instructors; director has implicit (unwritten) access to chief academic officers; director may report to a unit outside of central academic administration."
+          ],
+          [
+            "Center is the principal educational development unit on campus. Director has a direct reporting line to a chief academic officer and explicit access to central academic administrators, e.g., provost, dean."
+          ]
+        ]
+      },
+      {
+        "id": "A5",
+        "name": "Collaborations",
+        "levels": [
+          [
+            "Center is in initial stages of identifying mission-aligned collaborations or mergers."
+          ],
+          [
+            "Center is cultivating mission-aligned collaborations or mergers (instructional technology unit is a common partner but CTL may network with other units).",
+            "Services across units need better coordination or integration. CTL director/staff have limited influence on selection of instructional technologies, learning spaces, and resources that support teaching and learning."
+          ],
+          [
+            "Center works extensively with mission-aligned collaborating units or departments to provide coordinated, integrated, or embedded services. (Common partners include instructional technology unit, departments/colleges, and/or library. Other partner units may include student academic support, assessment, writing, diversity and inclusion, community service learning, or graduate school.)",
+            "CTL may co-locate, integrate, or closely collaborate with other units, e.g., instructional technology. CTL director/staff are involved in decisions that influence selection of instructional technologies/learning spaces/resources that support teaching and learning."
+          ]
+        ]
+      },
+      {
+        "id": "A6",
+        "name": "Operational Procedures and Archives",
+        "levels": [
+          [
+            "Center is developing guidelines for organization’s operation and creating mechanisms for transmitting institutional memory (e.g., records of programming, assessment activities)."
+          ],
+          [
+            "Center has some guidelines for organizational operation; mechanisms for transmitting institutional memory (records of past programming, assessment activities) are in place. Records may be in paper or digital format."
+          ],
+          [
+            "Center has robust guidelines and procedures for organizational operation. Mechanisms for transmitting institutional memory (records of past programming, assessment activities) are in place and chart impact over time. Records are digitally organized, archived, and regularly updated."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B",
+    "name": "Resource Allocation and Infrastructure",
+    "intro": "The degree to which an institution funds and locates teaching development, and the ways in which a CTL designs programming for the campus, indicates its centrality. Depending upon institutional mission, size, and Carnegie classification, some of these elements (like staffing) may be aspirational, or outside of Center scope.",
+    "criteria": [
+      {
+        "id": "B1",
+        "name": "Budget",
+        "levels": [
+          [
+            "Funding for the Center is largely in the form of support for specific events or programs."
+          ],
+          [
+            "Center has appropriate institutional budget, although it may fluctuate from year to year.",
+            "Budget may encompass both programming and personnel costs, although personnel may be part of central administration budget. Funds are available to support the professional development of some Center staff.",
+            "Budget may be supplemented by cost-sharing with other units, one-time campus allocations, or external grants."
+          ],
+          [
+            "Center budget is funded proportional to campus mission, vision, and strategic direction. Budget absorbs rates of fluctuation from year to year and allows for long-term planning, staffing, and growth.",
+            "Budget encompasses programming, personnel costs, services (e.g., food, outside speakers), and supplies. Funds are available to support the professional development of all Center staff.",
+            "Budget is supplemented by cost-sharing with other units or one-time campus allocations. Budget is sufficient without external sources of funds but CTL may hold a gift fund, secure external grants, or partner on grants."
+          ]
+        ]
+      },
+      {
+        "id": "B2",
+        "name": "Location & Space",
+        "levels": [
+          [
+            "Center utilizes space that may be shared among multiple institutional units.",
+            "Center staff may be housed in a location separate from where programming and services are offered."
+          ],
+          [
+            "The Center has dedicated space and can be located without difficulty. There is adequate office space for staff; access to a classroom, lab, and spaces for meetings, programs, and events. Center space is inviting and adequately resourced but design may not meet current demand/need and/or reflect pedagogical principles and practices."
+          ],
+          [
+            "CTL is in a location that is easily found and accessible, with ample office space for staff. May include a workspace for instructors. CTL has dedicated classroom, lab, and meeting/event space. Center space is welcoming, engaging, and resource rich. CTL features new spaces or repurposes existing space configured with technology. Pedagogical principles and practices drive space design, including educational technology implementation."
+          ]
+        ]
+      },
+      {
+        "id": "B3",
+        "name": "Staffing",
+        "levels": [
+          [
+            "CTL may be led by a faculty committee (some with release/reassigned time) or by an individual administrator, faculty or staff member who may be less than full time.",
+            "The committee/individual charged with leading the CTL is beginning to develop a background in the field of faculty/educational development.",
+            "CTL struggles to meet requests."
+          ],
+          [
+            "CTL has an individual charged with supporting educational development. Center staff includes a director, although may be less than full-time. Staffing is relatively lean.",
+            "At least one member of the CTL staff has a background in the field of educational development.",
+            "Requests from faculty may exceed the staff’s capacity."
+          ],
+          [
+            "Center has a dedicated staff that includes a full-time director who may also hold other titles. Staffing is substantial and may include a program coordinator, associate or assistant director, instructional/technology consultant, faculty associate, postdoc, graduate student or undergraduate assistant, full- or part-time.",
+            "Multiple members of CTL staff have backgrounds in educational development.",
+            "Staff is able to meet most or all requests for services and is sufficient to meet operational needs (e.g., publicity, archiving)."
+          ]
+        ]
+      },
+      {
+        "id": "B4",
+        "name": "Online Resources",
+        "levels": [
+          [
+            "Center’s website is in development or is established with basic information about Center’s location, contact information, and schedule of events. Center staff are considering how/whether to provide instructional resources online."
+          ],
+          [
+            "Center may extend its reach via web pages that are current and easily navigable; some instructional resources and program materials may be available online."
+          ],
+          [
+            "Center significantly extends its reach via a dynamic online presence. Web pages are current and easily navigable. Instructional resources and program materials are online and may include asynchronous programming (webinars), electronic newsletters, blogs, and links to other print and visual materials."
+          ]
+        ]
+      },
+      {
+        "id": "B5",
+        "name": "Communication & Reputation",
+        "levels": [
+          [
+            "Center staff is developing a marketing plan. Communication is largely event-based and is accomplished through flyers, word of mouth, and emails.",
+            "CTL is developing a needs assessment to better understand the diverse interests of faculty across departments, career stages, and appointment types."
+          ],
+          [
+            "Regular communication is offered to the campus (e.g., via email, newsletter, or social media).",
+            "CTL is beginning to develop a reputation for providing programs responsive to instructor/constituencies’ needs. Some departments/appointment types may be overrepresented in attendance, while others may be underrepresented. Programming may be perceived as for certain departments/appointment types only, e.g., humanities, tenure-track faculty."
+          ],
+          [
+            "CTL provides proactive and timely outreach via email, newsletters, social media engagement, and “on the road” events.",
+            "Center has strong reputation for programs highly responsive to identified needs and increases awareness on campus through promotional materials. Programming is well attended and perceived as open and available to all."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C",
+    "name": "Programs and Services",
+    "intro": "Teaching and learning centers develop evidence-based, mission-dependent programming based upon instructor, student, and campus need. While the domains below may be context-specific, relationships and community remain key indicators of Center viability.",
+    "criteria": [
+      {
+        "id": "C1",
+        "name": "Scope",
+        "levels": [
+          [
+            "Programs and services are responsive to the expressed needs of some CTL constituencies but are not fully aligned with Center mission and goals. Programs are limited in variety and ability to scale."
+          ],
+          [
+            "Programs and services are responsive to expressed needs of many/all CTL constituencies and are aligned with mission and goals. Programming may not be scalable, or largely targets a particular career stage, appointment type, or disciplinary area."
+          ],
+          [
+            "Programs and services are responsive to and advance needs and initiatives as defined by the institution, are aligned with CTL mission and goals, and are grounded in literature on teaching, learning, and educational development. A diverse array of programs is designed to reach broad campus constituencies."
+          ]
+        ]
+      },
+      {
+        "id": "C2",
+        "name": "Target Audience",
+        "levels": [
+          [
+            "Center programs and services target individual instructors, including those with contingent appointments, post-doctoral fellows, or graduate students (as applicable for the institution)."
+          ],
+          [
+            "Plus: Center programs and services target cohorts that represent instructors at similar career milestones (e.g., new faculty), roles (e.g., non-tenure-track faculty), common interests or responsibilities (e.g., teaching crucial gateway courses, or teaching multicultural content), or those from the same academic department or program."
+          ],
+          [
+            "Plus: Center collaborates with other centers, or disseminates to a wider audience beyond the institution, through online resources, programs, and scholarly communications (e.g., presentations and publications)."
+          ]
+        ],
+        "cumulative": true
+      },
+      {
+        "id": "C3",
+        "name": "Content",
+        "levels": [
+          [
+            "CTL programs address course design, topics in teaching effectiveness, and/or use of specific technologies."
+          ],
+          [
+            "Plus: CTL programs address curriculum and learner-centered design that is inclusive of all students, motivating and effective learning activities and assignments for culturally diverse classrooms, and fair and equitable assessment."
+          ],
+          [
+            "Plus: CTL offers a programmatic approach that provides a continuous professional development model for instructors as learners, offering targeted, motivating and inclusive instruction that supports faculty growth. Programming addresses a strategic campus need, e.g., increasing graduation rates among all student groups, developing faculty leadership."
+          ]
+        ],
+        "cumulative": true
+      },
+      {
+        "id": "C4",
+        "name": "Approach",
+        "levels": [
+          [
+            "CTL programs and services disseminate content related to teaching and support implementation mainly through one-time workshops, individual consultations, and self-help resources (e.g., online). Center may rely heavily on outsourced programming sources."
+          ],
+          [
+            "Plus: Center offers an array of original programs (e.g., individual consultation with feedback, discipline-specific/customized workshops or seminars in a series, communities of practice, institutes/retreats) that disseminate content related to teaching and strongly support implementation."
+          ],
+          [
+            "Plus: Center offers longitudinal programming designed according to principles of adult learning. Center offers an array of original programs and curricular opportunities (e.g., courses, certificates) that disseminate content related to a range of educational development needs. CTL strongly supports implementation and encourages reflective practice (e.g., retreats, grants to support scholarly approaches to teaching and learning, curriculum projects, conference travel)."
+          ]
+        ],
+        "cumulative": true
+      },
+      {
+        "id": "C5",
+        "name": "Reach",
+        "levels": [
+          [
+            "Depending upon campus mission and size, CTL reaches a small fraction of instructors. Participation is not representative of appointment types, career stages, departments/colleges.",
+            "CTL thinks strategically about how to incentivize participation, e.g., how to reach faculty with part-time or contingent appointments for whom developmental activities are not included as part of regular faculty work."
+          ],
+          [
+            "CTL reach is growing. Participation is somewhat representative of appointment types, career stages, departments/colleges.",
+            "Center is able to offer modest incentives to select constituencies to encourage and recognize engagement in CTL initiatives."
+          ],
+          [
+            "Depending upon campus size and mission, CTL reaches a critical mass of instructors. Participation is strategically distributed across appointment types, career stages, and departments/colleges to serve critical institutional initiatives.",
+            "Incentives for instructors, especially those for whom developmental activities are not part of their regular workload, might include stipends to offset additional time commitments, paid course release time, conference registrations, or leadership opportunities to impact teaching culture, policies, and procedures."
+          ]
+        ],
+        "footnote": "The field of educational development would benefit from more research on what constitutes ample “reach,” but Bishop and Keehn’s (2015) study of 171 institutions suggests that estimated reach varies by institution type, ranging from 12–49 percent of full-time faculty, 17–34 percent of part-time faculty, 0–25 percent of graduate students, and 5–37 percent of undergraduates. Other proposed guidelines include a move past a threshold of 15–16 percent of instructors, to scale beyond innovators/early adopters or past “token status” (Kanter 1977; Rogers 1962)."
+      },
+      {
+        "id": "C6",
+        "name": "Impact",
+        "levels": [
+          [
+            "Center collects data on the numbers of participants using services and self-reports of program value, usefulness, and satisfaction. Data are used for planning, resource allocation, and to inform and enhance programs and services."
+          ],
+          [
+            "Plus: Center collects evidence of program outcomes, which may include measurements of the impact on participants’ teaching beliefs/attitudes, implementation of teaching practices, adoption of reflective strategies, and direct/indirect diffusion of effective practice. Center uses this evidence to improve program design."
+          ],
+          [
+            "Plus: Center collects evidence of program outcomes on student learning and/or institutional culture of teaching. Center engages in the scholarship of educational development that can inform and enhance the CTL’s programs and services through presentations and publications."
+          ]
+        ],
+        "cumulative": true
+      }
+    ]
+  }
+];
+
+/* ===================================================================== */
+
+var DKEY = 'ctlMatrixDraft.v2', LKEY = 'ctlMatrixLocalResponses.v2', UIKEY = 'ctlMatrixUI.v2';
+var CRITERIA = [], DOMAIN_OF = {};
+MATRIX.forEach(function (d) { d.criteria.forEach(function (c) { CRITERIA.push(c); DOMAIN_OF[c.id] = d; }); });
+function crit(id) { for (var i = 0; i < CRITERIA.length; i++) if (CRITERIA[i].id === id) return CRITERIA[i]; return null; }
+var NUM = { '1': 1, '2': 2, '3': 3 };
+
+// Browser storage, with an in-memory fallback for previews and private windows that block it.
+var MEM = {};
+function load(key, fb) {
+  var raw = null;
+  try { raw = localStorage.getItem(key); } catch (e) {}
+  if (raw == null && MEM[key] != null) raw = MEM[key];
+  try { if (raw) return JSON.parse(raw); } catch (e) {}
+  return fb();
+}
+function save(key, val) {
+  var raw = JSON.stringify(val); MEM[key] = raw;
+  try { localStorage.setItem(key, raw); } catch (e) {}
+  return true;
+}
+function newId() {
+  var a = new Uint8Array(12);
+  (window.crypto || window.msCrypto).getRandomValues(a);
+  return Array.prototype.map.call(a, function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+}
+function defaultYear() {
+  var d = new Date(), y = d.getMonth() >= 6 ? d.getFullYear() : d.getFullYear() - 1;
+  var label = y + '–' + String(y + 1).slice(-2);
+  if (YEARS.indexOf(label) > -1) return label;
+  return y < 2025 ? YEARS[0] : YEARS[YEARS.length - 1];
+}
+function blankDraft(keep) {
+  return { id: newId(), year: (keep && keep.year) || defaultYear(), role: '', unit: '', ratings: {}, comments: {} };
+}
+var draft = load(DKEY, blankDraft);
+var ui = load(UIKEY, function () { return { big: false, year: defaultYear(), commentsOpen: false }; });
+function saveDraft() { save(DKEY, draft); }
+function saveUI() { save(UIKEY, ui); }
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+function announce(msg) { var l = document.getElementById('live'); l.textContent = ''; setTimeout(function () { l.textContent = msg; }, 30); }
+function textToHTML(lines) { return (lines || []).map(function (l) { return '<p>' + esc(l) + '</p>'; }).join(''); }
+function fmt1(x) { return x == null ? '—' : x.toFixed(1); }
+function ratingLabel(v) {
+  if (NUM[v]) return v + ' · ' + LEVELS[NUM[v] - 1].name;
+  if (v === 'IE') return 'IE · Insufficient evidence to rate';
+  if (v === 'NA') return 'N/A · Outside the agreed scope';
+  return 'Not rated';
+}
+function fmtTime(iso) { try { return new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } }
+function fmtDateTime(iso) { try { return new Date(iso).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' }); } catch (e) { return iso || ''; } }
+
+/* ---------- Data store: Google Sheet, or this browser in test mode ---------- */
+function apiURL(params) {
+  var q = Object.keys(params || {}).map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&');
+  return API_URL + (q ? (API_URL.indexOf('?') > -1 ? '&' : '?') + q : '');
+}
+function submitResponse(payload) {
+  if (!API_URL) {
+    var list = load(LKEY, function () { return []; });
+    var rec = JSON.parse(JSON.stringify(payload)); rec.submitted = new Date().toISOString();
+    var i = list.map(function (r) { return r.id; }).indexOf(rec.id);
+    if (i > -1) list[i] = rec; else list.push(rec);
+    return save(LKEY, list) ? Promise.resolve({ ok: true }) : Promise.reject(new Error('This browser could not save the response.'));
+  }
+  return fetch(API_URL, { method: 'POST', body: JSON.stringify(payload) })
+    .then(function (r) { if (!r.ok) throw new Error('The results sheet returned an error (' + r.status + ').'); return r.json(); })
+    .then(function (j) { if (!j.ok) throw new Error(j.error || 'The results sheet did not accept the response.'); return j; });
+}
+function fetchResponses(year) {
+  if (!API_URL) {
+    return Promise.resolve(load(LKEY, function () { return []; }).filter(function (r) { return r.year === year; }));
+  }
+  return fetch(apiURL({ year: year, t: Date.now() }), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error('Could not load results (' + r.status + ').'); return r.json(); })
+    .then(function (j) { if (!j.ok) throw new Error(j.error || 'Could not load results.'); return j.responses || []; });
+}
+
+/* ---------- Routing ---------- */
+var CURRENT = (location.hash || '').replace(/^#/, '');
+function go(path) {
+  CURRENT = String(path || '').replace(/^#/, '');
+  try { history.pushState(null, '', '#' + CURRENT); } catch (e) {}
+  render(true); window.scrollTo(0, 0);
+}
+function route() {
+  var h = CURRENT.split('/');
+  var view = h[0] === 'results' ? 'results' : 'rate';
+  return { view: view, arg: h[1] || '' };
+}
+function render(focus) {
+  var r = route();
+  var display = r.view === 'results' && r.arg === 'display';
+  document.body.classList.toggle('display-mode', display);
+  document.documentElement.classList.toggle('big', !!ui.big || display);
+  document.getElementById('btn-big').setAttribute('aria-pressed', ui.big ? 'true' : 'false');
+  document.getElementById('testbar').hidden = !!API_URL;
+  var links = document.querySelectorAll('[data-view]');
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].getAttribute('data-view') === r.view) links[i].setAttribute('aria-current', 'page'); else links[i].removeAttribute('aria-current');
+  }
+  var main = document.getElementById('main');
+  main.className = r.view === 'rate' ? 'narrow' : '';
+  if (r.view === 'results') { main.innerHTML = viewResults(display); startPolling(); }
+  else { stopPolling(); main.innerHTML = viewRate(r.arg); }
+  if (focus) { var h = main.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus(); } }
+}
+
+/* ---------- Rating flow ---------- */
+function aboutComplete() { return YEARS.indexOf(draft.year) > -1 && ROLES.indexOf(draft.role) > -1 && draft.unit.trim(); }
+function viewRate(step) {
+  if (step === 'done') return viewDone();
+  if (step && step !== 'about' && !aboutComplete()) step = 'about';
+  if (step === 'review') return viewReview();
+  if (crit(step)) return viewCriterion(crit(step));
+  return viewAbout();
+}
+
+function viewAbout(errors) {
+  errors = errors || {};
+  var h = '<h2>Rate the Center for Teaching and Learning</h2>' +
+    '<p class="lede">Rate the CTL on the 17 areas of practice in the ACE/POD <cite>Center for Teaching and Learning Matrix</cite>. It takes about 10 minutes. Your response is anonymous, so please don’t enter your name.</p>' +
+    '<div id="about-form" class="card">';
+  if (errors.any) h += '<div class="notice" role="alert" tabindex="-1" id="about-errors"><p><strong>Please answer the questions marked below.</strong></p></div>';
+  h += '<div style="margin-bottom:1.25rem"><label class="field" for="year">Academic year</label>' +
+    '<select id="year">' + YEARS.map(function (y) { return '<option' + (y === draft.year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select></div>';
+  h += '<fieldset' + (errors.role ? ' aria-describedby="role-err"' : '') + '><legend>Your role</legend><div class="choices roles">' +
+    ROLES.map(function (r) {
+      var id = 'role-' + r.toLowerCase();
+      return '<div><input type="radio" name="role" id="' + id + '" value="' + r + '"' + (draft.role === r ? ' checked' : '') + '><label for="' + id + '">' + r + '</label></div>';
+    }).join('') + '</div>' + (errors.role ? '<p class="err" id="role-err">Choose your role.</p>' : '') + '</fieldset>';
+  h += '<div style="margin-bottom:1.25rem"><label class="field" for="unit">School or office<span class="hint">Choose a school or type the name of your office.</span></label>' +
+    '<input type="text" id="unit" list="unit-list" autocomplete="off" value="' + esc(draft.unit) + '"' + (errors.unit ? ' aria-invalid="true" aria-describedby="unit-err"' : '') + '>' +
+    '<datalist id="unit-list">' + SCHOOLS.map(function (s) { return '<option value="' + esc(s) + '"></option>'; }).join('') + '</datalist>' +
+    (errors.unit ? '<p class="err" id="unit-err">Enter your school or office.</p>' : '') + '</div>';
+  var started = Object.keys(draft.ratings).length;
+  h += '<div class="btnrow"><button type="button" class="btn" data-act="start">' + (started ? 'Continue rating' : 'Start rating') + '</button>' +
+    (started ? '<button type="button" class="btn quiet" data-act="restart">Start over</button>' : '') + '</div></div>';
+  h += '<section class="card hide-in-display" aria-labelledby="lv-h"><h3 id="lv-h">The three levels</h3><ul>' +
+    LEVELS.map(function (L) { return '<li><strong>' + L.v + ' · ' + esc(L.name) + ':</strong> ' + esc(L.desc) + '</li>'; }).join('') +
+    '<li><strong>IE:</strong> Insufficient evidence to rate</li><li><strong>N/A:</strong> Outside the agreed scope</li></ul>' +
+    '<p class="small">For each area, choose the description that most closely matches where the CTL is now. The matrix’s authors note that a center does not need to be at the Accomplished/Exemplary level to be well-functioning.</p></section>';
+  return h;
+}
+
+function viewCriterion(c) {
+  var idx = CRITERIA.indexOf(c), d = DOMAIN_OF[c.id];
+  var prev = idx > 0 ? '#rate/' + CRITERIA[idx - 1].id : '#rate/about';
+  var next = idx < CRITERIA.length - 1 ? '#rate/' + CRITERIA[idx + 1].id : '#rate/review';
+  var cur = draft.ratings[c.id] || '';
+  var pct = Math.round(((idx + 1) / CRITERIA.length) * 100);
+  var h = '<div class="progress"><p>Area ' + (idx + 1) + ' of ' + CRITERIA.length + '</p><div class="track" aria-hidden="true"><span style="width:' + pct + '%"></span></div></div>' +
+    '<p class="crit-eyebrow">' + esc(d.id + '. ' + d.name) + '</p>' +
+    '<h2 id="crit-title">' + esc(c.name) + '</h2>' +
+    (d.criteria[0] === c ? '<p class="domain-intro">' + esc(d.intro) + '</p>' : '') +
+    (c.cumulative ? '<p class="cumnote"><strong>Note:</strong> “Plus:” means the level includes everything in the level before it.</p>' : '');
+  h += '<fieldset><legend>Which description best matches the CTL now?</legend><div class="choices levels">';
+  LEVELS.forEach(function (L, i) {
+    var id = 'r-' + c.id + '-' + L.v;
+    h += '<div><input type="radio" name="rating" id="' + id + '" value="' + L.v + '"' + (cur === L.v ? ' checked' : '') + '>' +
+      '<label for="' + id + '"><span class="lvl-name"><span class="lvl-num" aria-hidden="true">' + L.v + '</span>' + esc(L.name) + '</span><span class="text">' + textToHTML(c.levels[i]) + '</span></label></div>';
+  });
+  h += '</div><div class="alt-choices">' +
+    [{ v: 'IE', t: 'Insufficient evidence to rate' }, { v: 'NA', t: 'Outside the agreed scope (N/A)' }].map(function (o) {
+      var id = 'r-' + c.id + '-' + o.v;
+      return '<span class="radio"><input type="radio" name="rating" id="' + id + '" value="' + o.v + '"' + (cur === o.v ? ' checked' : '') + '><label for="' + id + '">' + o.t + '</label></span>';
+    }).join('') +
+    (cur ? '<button type="button" class="btn quiet" data-act="clear-rating" data-c="' + c.id + '">Clear</button>' : '') +
+    '</div></fieldset>';
+  if (c.footnote) h += '<p class="footnote"><strong>Matrix note on reach:</strong> ' + esc(c.footnote) + '</p>';
+  var com = draft.comments[c.id] || '';
+  h += '<details class="comment"' + (com ? ' open' : '') + '><summary>Add a comment (optional)</summary>' +
+    '<label class="sr-only" for="com-' + c.id + '">Comment on ' + esc(c.name) + '</label>' +
+    '<textarea id="com-' + c.id + '" data-comment="' + c.id + '" rows="3" maxlength="1000">' + esc(com) + '</textarea></details>';
+  h += '<div class="stepnav"><a class="btn secondary" href="' + prev + '">← Back</a>' +
+    '<span class="btnrow"><a class="btn quiet" href="#rate/review">Review answers</a><a class="btn" href="' + next + '">' + (next === '#rate/review' ? 'Review and submit →' : 'Next →') + '</a></span></div>';
+  return h;
+}
+
+function viewReview(error) {
+  var unrated = CRITERIA.filter(function (c) { return !draft.ratings[c.id]; });
+  var h = '<h2>Review and submit</h2>' +
+    '<p class="lede">' + esc(draft.year) + ' · ' + esc(draft.role) + ' · ' + esc(draft.unit) + ' <a href="#rate/about">Change</a></p>';
+  if (error) h += '<div class="notice" role="alert"><p><strong>Your response wasn’t submitted.</strong> ' + esc(error) + '</p><p>Your answers are still saved in this browser. Check your connection and try again.</p></div>';
+  if (unrated.length) h += '<div class="notice info"><p>' + unrated.length + ' of ' + CRITERIA.length + ' areas are not rated. You can rate them now or submit without them.</p></div>';
+  h += '<div class="card"><table class="review"><caption class="sr-only">Your ratings</caption><thead><tr><th scope="col">Area</th><th scope="col">Your rating</th><th scope="col"><span class="sr-only">Change</span></th></tr></thead><tbody>';
+  CRITERIA.forEach(function (c) {
+    var v = draft.ratings[c.id];
+    h += '<tr><td>' + esc(c.id + '. ' + c.name) + (draft.comments[c.id] ? ' <span class="small">(comment)</span>' : '') + '</td>' +
+      '<td' + (v ? '' : ' class="unrated"') + '>' + esc(ratingLabel(v)) + '</td>' +
+      '<td><a href="#rate/' + c.id + '">Change<span class="sr-only"> ' + esc(c.name) + '</span></a></td></tr>';
+  });
+  h += '</tbody></table></div><div class="btnrow"><button type="button" class="btn" id="submit-btn" data-act="submit">Submit my ratings</button>' +
+    '<a class="btn secondary" href="#rate/' + CRITERIA[CRITERIA.length - 1].id + '">← Back</a></div>';
+  return h;
+}
+
+function viewDone() {
+  return '<h2>Thank you</h2><div class="notice ok"><p>Your ratings were recorded.</p></div>' +
+    '<p class="btnrow"><a class="btn" href="#results">See results</a><button type="button" class="btn secondary" data-act="new-response">Start a new response</button></p>' +
+    '<p class="small">Sharing this device? Choose “Start a new response” so the next person begins with a blank form.</p>';
+}
+
+/* ---------- Results ---------- */
+var results = { year: null, list: null, error: null, at: null, loading: false };
+var pollTimer = null;
+function startPolling() {
+  if (results.year !== ui.year || !results.list) refresh();
+  stopPolling();
+  if (API_URL) pollTimer = setInterval(function () { if (!document.hidden) refresh(); }, REFRESH_SECONDS * 1000);
+}
+function stopPolling() { if (pollTimer) { clearInterval(pollTimer); pollTimer = null; } }
+function refresh() {
+  var year = ui.year; results.loading = true;
+  fetchResponses(year).then(function (list) {
+    if (year !== ui.year) return;
+    results = { year: year, list: list, error: null, at: new Date().toISOString(), loading: false };
+    if (route().view === 'results') rerenderResults();
+  }, function (err) {
+    results.loading = false; results.error = err.message || String(err); results.year = year;
+    if (route().view === 'results') rerenderResults();
+  });
+}
+function rerenderResults() {
+  var a = document.activeElement, id = a && a.id, y = window.scrollY;
+  document.getElementById('main').innerHTML = viewResults(route().arg === 'display');
+  window.scrollTo(0, y);
+  if (id) { var el = document.getElementById(id); if (el) el.focus({ preventScroll: true }); }
+}
+
+function mean(a) { return a.length ? a.reduce(function (s, x) { return s + x; }, 0) / a.length : null; }
+function computeStats(list) {
+  var groups = ['All'].concat(ROLES);
+  var S = { n: list.length, byRole: {}, crit: {}, domains: {}, units: {}, comments: [] };
+  ROLES.forEach(function (r) { S.byRole[r] = 0; });
+  list.forEach(function (r) {
+    if (S.byRole[r.role] != null) S.byRole[r.role]++;
+    var u = (r.unit || '').trim() || 'Not given', key = u.toLowerCase();
+    if (!S.units[key]) { S.units[key] = { name: u, total: 0 }; ROLES.forEach(function (x) { S.units[key][x] = 0; }); }
+    S.units[key].total++; if (S.units[key][r.role] != null) S.units[key][r.role]++;
+  });
+  CRITERIA.forEach(function (c) {
+    var o = { counts: { '1': 0, '2': 0, '3': 0, IE: 0, NA: 0 }, vals: {} };
+    groups.forEach(function (g) { o.vals[g] = []; });
+    list.forEach(function (r) {
+      var v = r.ratings && r.ratings[c.id];
+      if (!v || o.counts[v] == null) return;
+      o.counts[v]++;
+      if (NUM[v]) { o.vals.All.push(NUM[v]); if (o.vals[r.role]) o.vals[r.role].push(NUM[v]); }
+      var com = r.comments && r.comments[c.id];
+      if (com) S.comments.push({ cid: c.id, role: r.role, unit: r.unit, rating: v, text: com });
+    });
+    o.mean = {}; groups.forEach(function (g) { o.mean[g] = mean(o.vals[g]); });
+    var rm = ROLES.map(function (r) { return o.mean[r]; }).filter(function (x) { return x != null; });
+    o.gap = rm.length > 1 ? Math.max.apply(null, rm) - Math.min.apply(null, rm) : null;
+    o.min = o.vals.All.length ? Math.min.apply(null, o.vals.All) : null;
+    o.max = o.vals.All.length ? Math.max.apply(null, o.vals.All) : null;
+    o.flagGap = o.gap != null && o.gap >= ROLE_GAP_FLAG - 1e-9;
+    o.flagSpread = o.min === 1 && o.max === 3;
+    S.crit[c.id] = o;
+  });
+  MATRIX.forEach(function (d) {
+    var D = { flags: 0, ie: 0, na: 0 };
+    groups.forEach(function (g) {
+      var ms = d.criteria.map(function (c) { return S.crit[c.id].mean[g]; }).filter(function (x) { return x != null; });
+      D[g] = { avg: mean(ms), rated: ms.length, total: d.criteria.length };
+    });
+    d.criteria.forEach(function (c) { var o = S.crit[c.id]; if (o.flagGap || o.flagSpread) D.flags++; D.ie += o.counts.IE; D.na += o.counts.NA; });
+    S.domains[d.id] = D;
+  });
+  return S;
+}
+function statCell(vals, isAll) {
+  var m = mean(vals);
+  if (m == null) return '<span class="dash">—</span>';
+  return '<span class="stat' + (isAll ? ' all' : '') + '"><span class="v">' + fmt1(m) + '</span><span class="rbar" aria-hidden="true"><i style="width:' + (m / 3 * 100).toFixed(1) + '%"></i></span><span class="n">n=' + vals.length + '</span></span>';
+}
+
+function viewResults(display) {
+  var h = '<div class="res-head"><div><h2>Results</h2>' +
+    '<div class="yearpick hide-in-display"><label for="res-year">Academic year</label><select id="res-year">' +
+    YEARS.map(function (y) { return '<option' + (y === ui.year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select></div>';
+  var list = results.year === ui.year ? results.list : null;
+  if (list) {
+    var S0 = computeStats(list);
+    h += '<p class="res-meta">' + (display ? esc(ui.year) + ' · ' : '') + list.length + ' response' + (list.length === 1 ? '' : 's') + ': ' +
+      ROLES.map(function (r) { return S0.byRole[r] + ' ' + (S0.byRole[r] === 1 ? r.toLowerCase() : ROLE_PLURAL[r].toLowerCase()); }).join(', ') +
+      (results.at ? ' · Updated ' + esc(fmtTime(results.at)) : '') + '</p>';
+  }
+  h += '</div><div class="btnrow hide-in-display">' +
+    '<button type="button" class="btn secondary" data-act="refresh">Refresh</button>' +
+    '<button type="button" class="btn secondary" data-act="open-display">Open on a second screen</button>' +
+    '<button type="button" class="btn" data-act="export-xlsx"' + (list && list.length ? '' : ' disabled') + '>Download Excel</button></div>' +
+    '<div class="display-only"><button type="button" class="btn secondary" data-act="fullscreen">Full screen</button></div></div>';
+
+  if (results.error && results.year === ui.year) h += '<div class="notice" role="alert"><p><strong>Couldn’t load results.</strong> ' + esc(results.error) + '</p></div>';
+  if (!list) return h + '<p>Loading responses…</p>';
+  if (!list.length) return h + '<div class="notice info"><p>No responses for ' + esc(ui.year) + ' yet.' + (API_URL ? ' This page checks for new responses every ' + REFRESH_SECONDS + ' seconds.' : '') + '</p></div>';
+
+  var S = computeStats(list);
+  h += '<div class="tiles">';
+  MATRIX.forEach(function (d) {
+    var D = S.domains[d.id];
+    h += '<section class="tile" aria-labelledby="t-' + d.id + '"><h3 id="t-' + d.id + '">' + esc(d.id + '. ' + d.name) + '</h3>' +
+      '<p class="hero"><span class="num">' + fmt1(D.All.avg) + '</span><span class="of">out of 3, all respondents</span></p>' +
+      '<p class="scored">' + D.All.rated + ' of ' + D.All.total + ' areas rated · IE ' + D.ie + ' · N/A ' + D.na + '</p><dl class="rolebars">';
+    ROLES.forEach(function (r) {
+      var g = D[r];
+      h += '<div><dt>' + ROLE_PLURAL[r] + '</dt><dd><span class="rbar" aria-hidden="true"><i style="width:' + (g.avg == null ? 0 : g.avg / 3 * 100).toFixed(1) + '%"></i></span><span class="rv">' + fmt1(g.avg) + '</span></dd></div>';
+    });
+    h += '</dl>' + (D.flags ? '<p class="flags">⚠ ' + D.flags + ' area' + (D.flags === 1 ? '' : 's') + ' flagged for discussion</p>' : '') + '</section>';
+  });
+  h += '</div>';
+  h += '<p class="legend">Averages use ratings of 1–3 only; IE and N/A are counted separately. Domain averages weight each area equally. <strong>⚠ Roles differ</strong>: role averages are ' + ROLE_GAP_FLAG.toFixed(1) + ' point or more apart. <strong>⚠ Wide spread</strong>: ratings run from 1 to 3.</p>';
+
+  MATRIX.forEach(function (d) {
+    h += '<section class="card" aria-labelledby="rt-' + d.id + '"><h3 id="rt-' + d.id + '">' + esc(d.id + '. ' + d.name) + '</h3>' +
+      '<table class="res-table"><colgroup><col style="width:23%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:8%"><col style="width:13%"></colgroup>' +
+      '<thead><tr><th scope="col">Area</th><th scope="col">All</th>' + ROLES.map(function (r) { return '<th scope="col">' + ROLE_PLURAL[r] + '</th>'; }).join('') + '<th scope="col">IE / N/A</th><th scope="col">Flags</th></tr></thead><tbody>';
+    d.criteria.forEach(function (c) {
+      var o = S.crit[c.id], flags = [];
+      if (o.flagGap) flags.push('<span class="flag">⚠ Roles differ</span>');
+      if (o.flagSpread) flags.push('<span class="flag">⚠ Wide spread</span>');
+      h += '<tr><td class="cname">' + esc(c.id + '. ' + c.name) + '</td>' +
+        '<td data-label="All">' + statCell(o.vals.All, true) + '</td>' +
+        ROLES.map(function (r) { return '<td data-label="' + ROLE_PLURAL[r] + '">' + statCell(o.vals[r]) + '</td>'; }).join('') +
+        '<td data-label="IE / N/A" class="small">' + o.counts.IE + ' / ' + o.counts.NA + '</td>' +
+        '<td data-label="Flags">' + (flags.length ? flags.join(' ') : '<span class="sr-only">None</span>') + '</td></tr>';
+    });
+    h += '</tbody></table></section>';
+  });
+
+  var units = Object.keys(S.units).map(function (k) { return S.units[k]; }).sort(function (a, b) { return b.total - a.total || a.name.localeCompare(b.name); });
+  h += '<section class="card" aria-labelledby="u-h"><h3 id="u-h">Responses by school or office</h3><table class="res-table"><colgroup><col style="width:40%"><col><col><col><col></colgroup><thead><tr><th scope="col">School or office</th>' +
+    ROLES.map(function (r) { return '<th scope="col">' + ROLE_PLURAL[r] + '</th>'; }).join('') + '<th scope="col">Total</th></tr></thead><tbody>' +
+    units.map(function (u) { return '<tr><td class="cname">' + esc(u.name) + '</td>' + ROLES.map(function (r) { return '<td data-label="' + ROLE_PLURAL[r] + '">' + u[r] + '</td>'; }).join('') + '<td data-label="Total"><strong>' + u.total + '</strong></td></tr>'; }).join('') +
+    '</tbody></table></section>';
+
+  if (S.comments.length) {
+    h += '<section class="card"><details class="comments" id="comments-details"' + (ui.commentsOpen ? ' open' : '') + '><summary>Comments (' + S.comments.length + ')</summary>';
+    CRITERIA.forEach(function (c) {
+      var cs = S.comments.filter(function (x) { return x.cid === c.id; });
+      if (!cs.length) return;
+      h += '<h4>' + esc(c.id + '. ' + c.name) + '</h4><ul class="comment-list">' + cs.map(function (x) {
+        return '<li><span class="who">' + esc(x.role) + ' · ' + esc(x.unit) + ' · rated ' + esc(NUM[x.rating] ? x.rating : (x.rating === 'NA' ? 'N/A' : x.rating)) + '</span><br>' + esc(x.text) + '</li>';
+      }).join('') + '</ul>';
+    });
+    h += '</details></section>';
+  }
+  return h;
+}
+
+/* ---------- Events ---------- */
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && e.target.id === 'unit') { e.preventDefault(); startRating(); }
+});
+function startRating() {
+  var role = document.querySelector('input[name=role]:checked');
+  draft.year = document.getElementById('year').value;
+  draft.role = role ? role.value : '';
+  draft.unit = document.getElementById('unit').value.trim();
+  saveDraft();
+  var errors = { role: !draft.role, unit: !draft.unit };
+  errors.any = errors.role || errors.unit;
+  if (errors.any) {
+    document.getElementById('main').innerHTML = viewAbout(errors);
+    document.getElementById('about-errors').focus();
+    return;
+  }
+  var first = CRITERIA.filter(function (c) { return !draft.ratings[c.id]; })[0] || CRITERIA[0];
+  go('rate/' + first.id);
+}
+document.addEventListener('change', function (e) {
+  var t = e.target;
+  if (t.name === 'rating' && t.checked) {
+    var cid = route().arg; draft.ratings[cid] = t.value; saveDraft();
+    var y = window.scrollY; render(false); window.scrollTo(0, y);
+    var el = document.getElementById(t.id); if (el) el.focus({ preventScroll: true });
+    announce('Selected ' + ratingLabel(t.value));
+  } else if (t.name === 'role' && t.checked) { draft.role = t.value; saveDraft(); }
+  else if (t.id === 'year') { draft.year = t.value; saveDraft(); }
+  else if (t.id === 'res-year') { ui.year = t.value; saveUI(); results.list = null; rerenderResults(); refresh(); }
+});
+document.addEventListener('input', function (e) {
+  var t = e.target;
+  if (t.getAttribute && t.getAttribute('data-comment')) { draft.comments[t.getAttribute('data-comment')] = t.value; saveDraft(); }
+  else if (t.id === 'unit') { draft.unit = t.value; saveDraft(); }
+});
+document.addEventListener('toggle', function (e) { if (e.target.id === 'comments-details') { ui.commentsOpen = e.target.open; saveUI(); } }, true);
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('[data-act]');
+  if (!b) return;
+  var act = b.getAttribute('data-act');
+  if (act === 'clear-rating') { delete draft.ratings[b.getAttribute('data-c')]; saveDraft(); render(false); announce('Rating cleared'); }
+  else if (act === 'start') { startRating(); }
+  else if (act === 'restart') {
+    if (b.getAttribute('data-armed') !== '1') { b.setAttribute('data-armed', '1'); b.textContent = 'Click again to clear your answers'; announce('Click again to clear your answers'); return; }
+    draft = blankDraft(draft); saveDraft(); render(true); announce('Answers cleared');
+  } else if (act === 'submit') { doSubmit(b); }
+  else if (act === 'new-response') { draft = blankDraft(draft); saveDraft(); go('rate/about'); }
+  else if (act === 'refresh') { refresh(); announce('Refreshing results'); }
+  else if (act === 'open-display') {
+    var w = null;
+    try { w = window.open(location.pathname + location.search + '#results/display', 'ctlResults'); } catch (x) {}
+    if (!w) go('results/display'); // pop-ups blocked: switch this window to the projector view
+  }
+  else if (act === 'fullscreen') { try { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); } catch (x) {} }
+  else if (act === 'export-xlsx') { exportXlsx(); }
+});
+function doSubmit(btn) {
+  btn.disabled = true; btn.textContent = 'Submitting…';
+  var payload = { id: draft.id, year: draft.year, role: draft.role, unit: draft.unit.trim(), ratings: {}, comments: {} };
+  CRITERIA.forEach(function (c) {
+    if (draft.ratings[c.id]) payload.ratings[c.id] = draft.ratings[c.id];
+    var cm = (draft.comments[c.id] || '').trim(); if (cm) payload.comments[c.id] = cm;
+  });
+  submitResponse(payload).then(function () {
+    var keep = draft; draft = blankDraft(keep); saveDraft();
+    ui.year = payload.year; saveUI(); results.list = null;
+    go('rate/done');
+  }, function (err) {
+    document.getElementById('main').innerHTML = viewReview(err.message || String(err));
+    var n = document.querySelector('.notice[role=alert]'); if (n) { n.setAttribute('tabindex', '-1'); n.focus(); }
+  });
+}
+function syncFromURL() {
+  var h = (location.hash || '').replace(/^#/, '');
+  if (h === CURRENT) return;
+  CURRENT = h; render(true); window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', syncFromURL);
+window.addEventListener('popstate', syncFromURL);
+// In-page links go through the router so they also work inside sandboxed previews.
+document.addEventListener('click', function (e) {
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  var a = e.target.closest && e.target.closest('a[href^="#"]');
+  if (!a || a.classList.contains('skip')) return;
+  e.preventDefault(); go(a.getAttribute('href'));
+}, true);
+window.addEventListener('storage', function (e) {
+  if (e.key === LKEY && route().view === 'results') refresh();
+  if (e.key === DKEY) draft = load(DKEY, blankDraft);
+});
+document.addEventListener('visibilitychange', function () { if (!document.hidden && route().view === 'results') refresh(); });
+document.getElementById('btn-big').addEventListener('click', function () { ui.big = !ui.big; saveUI(); render(false); });
+
+/* ---------- Excel export ---------- */
+var S = { header: 1, wrap: 2, bold: 3, num: 4, title: 5 };
+function hdr(arr) { return arr.map(function (t) { return { v: t, s: S.header }; }); }
+function numCell(x) { return x == null ? '' : { v: Math.round(x * 100) / 100, s: S.num }; }
+function ratingCell(v) { return NUM[v] ? NUM[v] : (v === 'NA' ? 'N/A' : (v || '')); }
+function exportXlsx() {
+  var list = results.list || [], St = computeStats(list), sheets = [];
+  var sum = [[{ v: 'SUNY Cortland CTL Matrix Review: ' + ui.year, s: S.title }], [],
+    [{ v: 'Academic year', s: S.bold }, ui.year],
+    [{ v: 'Responses', s: S.bold }, list.length]];
+  ROLES.forEach(function (r) { sum.push([{ v: ROLE_PLURAL[r], s: S.bold }, St.byRole[r]]); });
+  sum.push([{ v: 'Exported', s: S.bold }, fmtDateTime(new Date().toISOString())], []);
+  sum.push(hdr(['Domain', 'All respondents', 'Administrators', 'Faculty', 'Staff', 'Areas rated', 'Areas in domain', 'IE ratings', 'N/A ratings', 'Areas flagged']));
+  MATRIX.forEach(function (d) {
+    var D = St.domains[d.id];
+    sum.push([{ v: d.id + '. ' + d.name, s: S.wrap }, numCell(D.All.avg), numCell(D.Administrator.avg), numCell(D.Faculty.avg), numCell(D.Staff.avg), D.All.rated, D.All.total, D.ie, D.na, D.flags]);
+  });
+  sum.push([], [{ v: 'Averages use ratings of 1–3 only; IE and N/A are counted separately. Domain averages weight each area equally. Roles differ = role averages ' + ROLE_GAP_FLAG.toFixed(1) + ' point or more apart. Wide spread = ratings run from 1 to 3.', s: S.wrap }]);
+  sum.push([{ v: 'Rubric: A Center for Teaching and Learning Matrix (ACE and POD Network, 2018). CC BY-NC.', s: S.wrap }]);
+  sheets.push({ name: 'Summary', cols: [40, 16, 15, 12, 12, 12, 15, 11, 11, 13], rows: sum, freeze: 0 });
+
+  var cr = [hdr(['Domain', 'ID', 'Area', 'All avg', 'All n', 'Admin avg', 'Admin n', 'Faculty avg', 'Faculty n', 'Staff avg', 'Staff n', 'Rated 1', 'Rated 2', 'Rated 3', 'IE', 'N/A', 'Role gap', 'Flags'])];
+  CRITERIA.forEach(function (c) {
+    var o = St.crit[c.id], f = [];
+    if (o.flagGap) f.push('Roles differ'); if (o.flagSpread) f.push('Wide spread');
+    cr.push([{ v: DOMAIN_OF[c.id].name, s: S.wrap }, c.id, { v: c.name, s: S.wrap },
+      numCell(o.mean.All), o.vals.All.length, numCell(o.mean.Administrator), o.vals.Administrator.length,
+      numCell(o.mean.Faculty), o.vals.Faculty.length, numCell(o.mean.Staff), o.vals.Staff.length,
+      o.counts['1'], o.counts['2'], o.counts['3'], o.counts.IE, o.counts.NA, numCell(o.gap), f.join('; ')]);
+  });
+  sheets.push({ name: 'Area results', cols: [26, 6, 30, 9, 7, 10, 8, 11, 9, 9, 8, 8, 8, 8, 6, 6, 9, 22], rows: cr, freeze: 1 });
+
+  var rr = [hdr(['Submitted', 'Year', 'Role', 'School or office'].concat(CRITERIA.map(function (c) { return c.id + ' ' + c.name; })))];
+  list.slice().sort(function (a, b) { return String(a.submitted).localeCompare(String(b.submitted)); }).forEach(function (r) {
+    rr.push([r.submitted ? fmtDateTime(r.submitted) : '', r.year, r.role, { v: r.unit, s: S.wrap }].concat(CRITERIA.map(function (c) { return ratingCell(r.ratings && r.ratings[c.id]); })));
+  });
+  sheets.push({ name: 'Responses', cols: [20, 9, 14, 30].concat(CRITERIA.map(function () { return 12; })), rows: rr, freeze: 1 });
+
+  var cm = [hdr(['ID', 'Area', 'Role', 'School or office', 'Rating', 'Comment'])];
+  St.comments.forEach(function (x) { cm.push([x.cid, { v: crit(x.cid).name, s: S.wrap }, x.role, { v: x.unit, s: S.wrap }, ratingCell(x.rating), { v: x.text, s: S.wrap }]); });
+  sheets.push({ name: 'Comments', cols: [6, 28, 14, 28, 8, 70], rows: cm, freeze: 1 });
+
+  var rt = [hdr(['Domain', 'ID', 'Area'].concat(LEVELS.map(function (L) { return L.v + ' · ' + L.name; }), ['Matrix note']))];
+  CRITERIA.forEach(function (c) {
+    rt.push([{ v: DOMAIN_OF[c.id].name, s: S.wrap }, c.id, { v: c.name, s: S.wrap }].concat(c.levels.map(function (l) { return { v: l.join('\n\n'), s: S.wrap }; }), [{ v: c.footnote || '', s: S.wrap }]));
+  });
+  rt.push([], [{ v: 'Source: A Center for Teaching and Learning Matrix (2018), American Council on Education and POD Network. Creative Commons Attribution-NonCommercial International License.', s: S.wrap }]);
+  sheets.push({ name: 'Rubric text', cols: [24, 6, 26, 50, 50, 50, 40], rows: rt, freeze: 1 });
+
+  var blob = buildXlsx(sheets), name = 'CTL-Matrix-Review_' + ui.year.replace('–', '-') + '.xlsx';
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  announce('Downloaded ' + name);
+}
+
+function xmlEsc(s) {
+  return String(s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g, '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function colName(i) { var s = ''; i++; while (i > 0) { var m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; }
+function sheetXml(sh) {
+  var x = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">';
+  x += '<sheetViews><sheetView workbookViewId="0"' + (sh.selected ? ' tabSelected="1"' : '') + '>';
+  if (sh.freeze) x += '<pane ySplit="' + sh.freeze + '" topLeftCell="A' + (sh.freeze + 1) + '" activePane="bottomLeft" state="frozen"/><selection pane="bottomLeft"/>';
+  x += '</sheetView></sheetViews><sheetFormatPr defaultRowHeight="15"/>';
+  if (sh.cols && sh.cols.length) {
+    x += '<cols>'; sh.cols.forEach(function (w, i) { x += '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + w + '" customWidth="1"/>'; }); x += '</cols>';
+  }
+  x += '<sheetData>';
+  sh.rows.forEach(function (row, ri) {
+    x += '<row r="' + (ri + 1) + '">';
+    (row || []).forEach(function (cell, ci) {
+      if (cell === null || cell === undefined) return;
+      var v = cell, s = 0;
+      if (typeof cell === 'object') { v = cell.v; s = cell.s || 0; }
+      if (v === null || v === undefined) v = '';
+      var ref = colName(ci) + (ri + 1);
+      if (typeof v === 'number' && isFinite(v)) x += '<c r="' + ref + '"' + (s ? ' s="' + s + '"' : '') + '><v>' + v + '</v></c>';
+      else if (v === '' && !s) return;
+      else x += '<c r="' + ref + '" t="inlineStr"' + (s ? ' s="' + s + '"' : '') + '><is><t xml:space="preserve">' + xmlEsc(v) + '</t></is></c>';
+    });
+    x += '</row>';
+  });
+  return x + '</sheetData><pageMargins left="0.5" right="0.5" top="0.75" bottom="0.75" header="0.3" footer="0.3"/></worksheet>';
+}
+function buildXlsx(sheets) {
+  var files = [];
+  var ct = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/><Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>';
+  sheets.forEach(function (s, i) { ct += '<Override PartName="/xl/worksheets/sheet' + (i + 1) + '.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'; });
+  ct += '</Types>';
+  files.push(['[Content_Types].xml', ct]);
+  files.push(['_rels/.rels', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/></Relationships>']);
+  var now = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+  files.push(['docProps/core.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>CTL Matrix Committee Review</dc:title><dc:creator>SUNY Cortland CTL</dc:creator><dcterms:created xsi:type="dcterms:W3CDTF">' + now + '</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">' + now + '</dcterms:modified></cp:coreProperties>']);
+  files.push(['docProps/app.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>CTL Matrix Review</Application></Properties>']);
+  var wb = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><bookViews><workbookView activeTab="0"/></bookViews><sheets>';
+  var rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">';
+  sheets.forEach(function (s, i) {
+    var nm = s.name.replace(/[\\\/\?\*\[\]:]/g, ' ').slice(0, 31);
+    wb += '<sheet name="' + xmlEsc(nm) + '" sheetId="' + (i + 1) + '" r:id="rId' + (i + 1) + '"/>';
+    rels += '<Relationship Id="rId' + (i + 1) + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet' + (i + 1) + '.xml"/>';
+    if (i === 0) s.selected = true;
+    files.push(['xl/worksheets/sheet' + (i + 1) + '.xml', sheetXml(s)]);
+  });
+  wb += '</sheets></workbook>';
+  rels += '<Relationship Id="rId' + (sheets.length + 1) + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>';
+  files.push(['xl/workbook.xml', wb]);
+  files.push(['xl/_rels/workbook.xml.rels', rels]);
+  files.push(['xl/styles.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<numFmts count="1"><numFmt numFmtId="164" formatCode="0.0"/></numFmts>' +
+    '<fonts count="4"><font><sz val="11"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="11"/><name val="Calibri"/><family val="2"/></font><font><b/><sz val="14"/><color rgb="FF85181C"/><name val="Calibri"/><family val="2"/></font></fonts>' +
+    '<fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFD71E25"/><bgColor indexed="64"/></patternFill></fill></fills>' +
+    '<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>' +
+    '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>' +
+    '<cellXfs count="6">' +
+    '<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>' +
+    '<xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>' +
+    '<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>' +
+    '<xf numFmtId="0" fontId="2" fillId="0" borderId="0" xfId="0" applyFont="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf>' +
+    '<xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyAlignment="1"><alignment horizontal="left" vertical="top"/></xf>' +
+    '<xf numFmtId="0" fontId="3" fillId="0" borderId="0" xfId="0" applyFont="1"/>' +
+    '</cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>']);
+  return new Blob([zipStore(files)], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+
+var CRC_TABLE = (function () { var t = [], c; for (var n = 0; n < 256; n++) { c = n; for (var k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); t[n] = c >>> 0; } return t; })();
+function crc32(bytes) { var c = 0xFFFFFFFF; for (var i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function zipStore(files) {
+  var enc = new TextEncoder(), parts = [], central = [], offset = 0;
+  var d = new Date();
+  var dosTime = (d.getHours() << 11) | (d.getMinutes() << 5) | (Math.floor(d.getSeconds() / 2));
+  var dosDate = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+  files.forEach(function (f) {
+    var name = enc.encode(f[0]), data = enc.encode(f[1]), crc = crc32(data);
+    var lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, dosTime, true); lh.setUint16(12, dosDate, true); lh.setUint32(14, crc, true);
+    lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true); lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), name, data);
+    var ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, dosTime, true); ch.setUint16(14, dosDate, true); ch.setUint32(16, crc, true);
+    ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true); ch.setUint16(28, name.length, true);
+    ch.setUint16(30, 0, true); ch.setUint16(32, 0, true); ch.setUint16(34, 0, true); ch.setUint16(36, 0, true); ch.setUint32(38, 0, true); ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), name);
+    offset += 30 + name.length + data.length;
+  });
+  var cdSize = central.reduce(function (s, a) { return s + a.length; }, 0);
+  var end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+  end.setUint32(12, cdSize, true); end.setUint32(16, offset, true); end.setUint16(20, 0, true);
+  var all = parts.concat(central, [new Uint8Array(end.buffer)]);
+  var total = all.reduce(function (s, a) { return s + a.length; }, 0), out = new Uint8Array(total), p = 0;
+  all.forEach(function (a) { out.set(a, p); p += a.length; });
+  return out;
+}
+
+
+render(false);
+</script>
+</body>
+</html>
